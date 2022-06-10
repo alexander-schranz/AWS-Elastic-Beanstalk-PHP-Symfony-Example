@@ -34,7 +34,7 @@ You did struggle with something let me know. So we can here add more faqs to hel
 
 ### Deploy locally
 
-You can deploy when you have eb installed (MAC `brew install awsebcli`) via:
+You can deploy when you have eb installed (MacOS `brew install awsebcli`) via:
 
 ```bash
 eb init "Your Application Name" --platform "PHP 8.0 running on 64bit Amazon Linux 2" --region=eu-central-1 --profile=eb-cli
@@ -49,7 +49,7 @@ You can use following command to debug deploy errors:
 eb logs
 ```
 
-The full logs you can download via the AWS Website the following logs:
+The full logs you can download via the AWS Website. In my case following logs did help
 
  - `eb-engine.log`
  - `cfn-init.log`
