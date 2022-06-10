@@ -1,0 +1,21 @@
+stages:
+    - 🚀 Deploy
+
+deploy-prod:
+    image: wbgrs/php:8.0-eb
+    stage: 🚀 Deploy
+    allow_failure: false
+    needs: []
+    environment:
+        name: production
+# Enable this to allow deploy only on main branch:
+#    only:
+#        - main
+    when: manual
+    except:
+        - schedules
+    before_script:
+        - ./.gitlab/create_aws_config.sh
+        - eb init "My Application Name" --platform "PHP 8.0 running on 64bit Amazon Linux 2" --region=eu-central-1 --profile=eb-cli
+    script:
+        - eb deploy
