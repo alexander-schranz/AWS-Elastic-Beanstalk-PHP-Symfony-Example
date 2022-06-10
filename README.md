@@ -6,12 +6,12 @@ This repository should help others how to deploy your Symfony application to AWS
 
  - Elasticbeanstalk instance
  - DB Instance
- - Configured ENV Variables
+ - Configured ENV Variables (configured via AWS UI)
    - `APP_ENV`
    - `DATABASE_URL`
    - `MESSENGER_TRANSPORT_DSN` (if messenger is used)
    - `MAILER_DSN` (if mailer is used)
- - Gitlab ENV Variables (if gitlab is used for deployment)
+ - Gitlab ENV Variables (if gitlab is used for deployment, configured via Gitlab UI)
     - `AWS_ACCESS_KEY_ID`
     - `AWS_SECRET_ACCESS_KEY`
 
