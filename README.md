@@ -49,8 +49,8 @@ You can use following command to debug deploy errors:
 eb logs
 ```
 
-The full logs you can download via the AWS Website then have also a look at:
+The full logs you can download via the AWS Website the following logs:
 
  - `eb-engine.log`
  - `cfn-init.log`
- - `cfn-init-cmd.log` (this log file help me to find illegal syntax in mac `command` script)
+ - `cfn-init-cmd.log` (this log file helped me find illegal syntax in my `command` scripts)
