@@ -54,3 +54,14 @@ The full logs you can download via the AWS Website. In my case following logs di
  - `eb-engine.log`
  - `cfn-init.log`
  - `cfn-init-cmd.log` (this log file helped me find illegal syntax in my `command` scripts)
+
+### Forcing HTTPS
+
+In the `.platform/nginx/conf.d/elasticbeanstalk/nginx.conf` it is possible to force https.
+Via: 
+
+```nginx
+    fastcgi_param HTTPS on;
+```
+
+I could not get it work via x-forwarded-* headers as the were not send to my instance.
