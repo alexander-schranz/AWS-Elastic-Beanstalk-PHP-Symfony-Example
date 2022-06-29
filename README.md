@@ -65,4 +65,11 @@ Via:
     fastcgi_param HTTPS on;
 ```
 
-I could not get it work via x-forwarded-* headers as the were not send to my instance.
+I could not get it work via `x-forwarded-*` headers as the were not send to my instance.
+
+### Cronjob only on one Instance
+
+If your applicaton is running with multiple instances it is maybe important that your cronjobs
+only run on one instance for this have a look at the following issue and example:
+
+[https://github.com/alexander-schranz/AWS-Elastic-Beanstalk-PHP-Symfony-Example/issues/1](https://github.com/alexander-schranz/AWS-Elastic-Beanstalk-PHP-Symfony-Example/issues/1).
