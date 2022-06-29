@@ -11,7 +11,6 @@ set -e
 #fi
 
 echo "Supervisor - starting setup"
-. /opt/elasticbeanstalk/deployment/env
 
 if [ ! -f /usr/bin/supervisord ]; then
     echo "installing supervisor"
@@ -30,9 +29,9 @@ if [ ! -d /etc/supervisor/conf.d ]; then
     echo "create supervisor configs directory"
 fi
 
-. /opt/elasticbeanstalk/deployment/env && cat .ebextensions/supervisor/supervisord.conf > /etc/supervisor/supervisord.conf
-. /opt/elasticbeanstalk/deployment/env && cat .ebextensions/supervisor/supervisord.conf > /etc/supervisord.conf
-. /opt/elasticbeanstalk/deployment/env && cat .ebextensions/supervisor/supervisor_messenger.conf > /etc/supervisor/conf.d/supervisor_messenger.conf
+cat .ebextensions/supervisor/supervisord.conf > /etc/supervisor/supervisord.conf
+cat .ebextensions/supervisor/supervisord.conf > /etc/supervisord.conf
+cat .ebextensions/supervisor/supervisor_messenger.conf > /etc/supervisor/conf.d/supervisor_messenger.conf
 
 if ps aux | grep "[/]usr/bin/supervisord"; then
     echo "supervisor is running"
