@@ -30,7 +30,7 @@ fi
 
 . /opt/elasticbeanstalk/deployment/env && cat .ebextensions/supervisor/supervisord.conf > /etc/supervisor/supervisord.conf
 . /opt/elasticbeanstalk/deployment/env && cat .ebextensions/supervisor/supervisord.conf > /etc/supervisord.conf
-. /opt/elasticbeanstalk/deployment/env && cat .ebextensions/supervisor/supervisor_laravel.conf > /etc/supervisor/conf.d/supervisor_laravel.conf
+. /opt/elasticbeanstalk/deployment/env && cat .ebextensions/supervisor/supervisor_messenger.conf > /etc/supervisor/conf.d/supervisor_messenger.conf
 
 if ps aux | grep "[/]usr/bin/supervisord"; then
     echo "supervisor is running"
