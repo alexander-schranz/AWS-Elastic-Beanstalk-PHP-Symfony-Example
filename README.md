@@ -73,3 +73,17 @@ If your applicaton is running with multiple instances it is maybe important that
 only run on one instance for this have a look at the following issue and example:
 
 [https://github.com/alexander-schranz/AWS-Elastic-Beanstalk-PHP-Symfony-Example/issues/1](https://github.com/alexander-schranz/AWS-Elastic-Beanstalk-PHP-Symfony-Example/issues/1).
+
+### Permission denied install_supervisor
+
+If you have problem to deploy with supervisor and have following in your `cfn-init-cmd.log`:
+
+```bash
+/bin/sh: .ebextensions/supervisor/setup.sh: Permission denied
+```
+
+It could be an error with the `setup.sh` not being executable so make it executable via:
+
+```bash
+chmod +x .ebextensions/supervisor/setup.sh: 
+```
