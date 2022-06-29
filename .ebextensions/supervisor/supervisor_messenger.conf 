@@ -1,0 +1,4 @@
+[program:sync-consumer]
+command=/var/data/websites/coupon-admin-next/current/bin/console messenger:consume async --time-limit=3600
+autostart=true
+autorestart=true

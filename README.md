@@ -22,8 +22,9 @@ This repository should help others how to deploy your Symfony application to AWS
  - doctrine migration configuration ([.ebextensions/migration.config](.ebextensions/migration.config))
  - php configuration ([.ebextensions/php.config](.ebextensions/php.config))
    - redis extension included 
- - publicdir configuration ([.ebextensions/php.config](.ebextensions/publicdir.config))
- - nginx vhost ([.ebextensions/php.config](.platform/nginx/conf.d/elasticbeanstalk/php.conf))
+ - publicdir configuration ([.ebextensions/publicdir.config](.ebextensions/publicdir.config))
+ - supervisor configuration ([.ebextensions/supervisor.config](.ebextensions/supervisor.config))
+ - nginx vhost ([.platform/nginx/conf.d/elasticbeanstalk/php.conf](.platform/nginx/conf.d/elasticbeanstalk/php.conf))
  - gitlab deployment ([.gitlab-ci.yml](.gitlab-ci.yml) / [.gitlab/create_aws_config.sh](.gitlab/create_aws_config.sh))
 
 ## Feedback welcome
