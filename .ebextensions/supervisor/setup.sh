@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # If you want to have more than one application, and in just one of them to run the supervisor, uncomment the lines below,
 # and add the env variable IS_WORKER as true in the EBS application you want the supervisor
 
